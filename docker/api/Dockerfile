@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y \
       zip unzip zlib1g-dev vim libzip-dev \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /var/lib/apt/lists/*
 
 # add php-extention-module & xdebug
 RUN docker-php-ext-install zip pdo_mysql bcmath && \
